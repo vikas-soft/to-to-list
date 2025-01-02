@@ -1,0 +1,121 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e671d2, #b0b659);
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    padding: 20px 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 20px auto 20px;
+    background: #fff;
+}
+h2 img{
+    width: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.todo-app h2{
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    align-items: center;
+    margin-left: 10px; 
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background: rgba(0,0,0,0.1);
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.row input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 20px;
+}
+.row button{
+    border: none;
+    outline: none;
+    padding: 10px 40px;
+    color: #fff;
+    background: #ff5945;
+    cursor: pointer;
+    border-radius: 40px;
+    font-weight: bold;
+}
+ul li{
+    list-style: none;
+    background: rgba(0,0,0,0.1);
+    padding: 12px 8px 10px 50px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    font-size: 17px;
+    justify-content: center;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-image: url(uncheck.png);
+    background-position: center;
+    background-size: cover;
+    top: 8px ;
+    left: 8px;
+}
+ul li.checked{
+    background: #ff5945;
+    color:black;
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+ul li.checked::before{
+    background-image: url(tick.png);
+    background-position: center;
+    background-size: cover;
+    width: 28px;
+    height: 28px;
+}
+ul li span{
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    font-size: 25px;
+    top: 8px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    
+}
+ul li span:hover{
+    color: #111010;
+    background: rgba(79, 218, 156, 0.5);
+}
+
+.todo-app footer{
+    opacity: 0.5;
+    font-size: 15px;
+    padding-top: 70px;
+    margin: 20px 0 0 200px;
+}
